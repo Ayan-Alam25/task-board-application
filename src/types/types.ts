@@ -29,5 +29,5 @@ export interface Board {
     description: string;
     createdAt: Date;
     createdBy: User;
-    Columns: Column[];
+    columns: Column[];
 }

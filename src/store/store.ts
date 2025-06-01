@@ -44,14 +44,14 @@ const useStore = create<StoreState>()(
     (set) => ({
       currentUser: {
         id: "user-1",
-        name: "John Doe",
-        email: "john@example.com",
+        name: "Ayan Alam",
+        email: "ayan@example.com",
       },
       users: [
         {
           id: "user-1",
-          name: "John Doe",
-          email: "john@example.com",
+          name: "Ayan Alam",
+          email: "ayan@example.com",
         },
         {
           id: "user-2",

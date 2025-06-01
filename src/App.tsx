@@ -1,16 +1,17 @@
-
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "./App.css";
+import BoardView from "./components/BoardView";
+import BoardDetail from "./components/BoardDetail";
 
 function App() {
- 
-
   return (
-    <>
-    <div className='text-3xl flex  justify-center align-center'>Task Board</div>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<BoardView />} />
+        <Route path="/board/:id" element={<BoardDetail />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

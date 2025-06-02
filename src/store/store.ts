@@ -216,6 +216,26 @@ const useStore = create<StoreState>()(
           boards: state.boards.map((board) => {
             if (board.id !== boardId) return board;
 
+            // Handle same column move differently
+            if (sourceColumnId === destinationColumnId) {
+              return {
+                ...board,
+                columns: board.columns.map((column) => {
+                  if (column.id !== sourceColumnId) return column;
+
+                  const newCards = [...column.cards];
+                  const [removed] = newCards.splice(sourceIndex, 1);
+                  newCards.splice(destinationIndex, 0, removed);
+
+                  return {
+                    ...column,
+                    cards: newCards,
+                  };
+                }),
+              };
+            }
+
+            // Different column move (your existing logic)
             const sourceColumn = board.columns.find(
               (col) => col.id === sourceColumnId
             );

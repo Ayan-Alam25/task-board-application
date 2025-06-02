@@ -1,54 +1,57 @@
-# React + TypeScript + Vite
+# Task Board Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Board View
+![Task Board Screenshot](/public/screenshot-1.png) 
 
-Currently, two official plugins are available:
+### Board Details
+![Task Board Screenshot](/public/screenshot-2.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A collaborative task management application built with React, TypeScript, and Zustand, designed to help teams organize work visually using Kanban-style boards.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📋 Create and manage multiple task boards
+- 🗂️ Organize tasks into customizable columns (To Do, In Progress, Done)
+- 🎯 Assign tasks to team members
+- ⚡ Drag-and-drop task management
+- 🔖 Priority tagging (High/Medium/Low)
+- 📅 Due date tracking
+- 💾 Persistent storage using localStorage
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Frontend**: React 18 + TypeScript
+- **State Management**: Zustand
+- **Styling**: Tailwind CSS
+- **Drag-and-Drop**: @hello-pangea/dnd
+- **Date Handling**: date-fns
+- **Icons**: react-icons
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Getting Started
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm (v8 or higher)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ayan-Alam25/task-board-application.git
+   cd task-board-application
+   ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3.  Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
